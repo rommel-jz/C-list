@@ -1,4 +1,6 @@
 //反转链表
+
+//整体反转
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -19,13 +21,10 @@ void Reverse(ListNode*& head) {
 	while (head != nullptr) {
 		ListNode* pnext = head->next;		
 		head->next = pre;//该节点指向前一个结点
-		if (pnext == nullptr) {
-			return;
-		}
 		pre = head;//保存头节点
 		head = pnext;//继续到下一个节点进行反转
-	}
-	
+	}//最后一个节点反转后，跳出循环
+	head=pre;
 }
 
 
