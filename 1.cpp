@@ -19,6 +19,10 @@ int main() {
 		p = p->next;
 	}
 	//在堆上分配储存空间给链表
+	if (cin.fail()) {
+	cin.clear();
+	cin.ignore();
+}//检查并清楚错误状态
 	ListNode* m = head;
 	while (m!=nullptr) {
 		cout << m->val << endl;
